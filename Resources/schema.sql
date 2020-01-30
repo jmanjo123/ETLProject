@@ -55,7 +55,7 @@ host_since DATE,
 reviewer_name TEXT,
 comments TEXT,
 PRIMARY KEY (id),
-FOREIGN KEY (listing_id) REFERENCES listings_locations(id));
+FOREIGN KEY (id) REFERENCES listings_locations(id));
 
 
 SELECT * FROM url
