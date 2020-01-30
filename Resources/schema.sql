@@ -1,6 +1,6 @@
 -- Create tables for raw data to be loaded into
 
-DROP TABLE if exists listings_locations
+DROP TABLE if exists listings_locations;
 DROP TABLE  if exists listings_details;
 DROP  TABLE  if exists url;
 DROP  TABLE  if exists hosts;
@@ -42,12 +42,24 @@ host_url TEXT,
 host_name TEXT,
 host_since DATE,
 host_location TEXT,
-host_response_rate INT,
+host_response_rate FLOAT,
 PRIMARY KEY (id),
 FOREIGN KEY (id) REFERENCES listings_locations(id));
+
+CREATE TABLE reviews(
+listing_id INT, 
+id INT,
+date DATE,
+reviewer_id INT,
+host_since DATE,
+reviewer_name TEXT,
+comments TEXT,
+PRIMARY KEY (id),
+FOREIGN KEY (listing_id) REFERENCES listings_locations(id));
 
 
 SELECT * FROM url
 SELECT * FROM hosts
 SELECT * FROM listings_locations
 SELECT * FROM listings_details
+SELECT * FROM reviews
