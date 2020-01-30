@@ -1,10 +1,10 @@
 -- Create tables for raw data to be loaded into
 
-DROP TABLE if exists listings_locations;
-DROP TABLE  if exists listings_details;
+DROP  TABLE  if exists listings_details;
 DROP  TABLE  if exists url;
 DROP  TABLE  if exists hosts;
-
+DROP  TABLE  if exists reviews;
+DROP  TABLE if exists listings_locations;
 
 CREATE TABLE listings_locations (
 id INT PRIMARY KEY,
